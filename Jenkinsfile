@@ -48,7 +48,7 @@ pipeline {
                         docker pull ${registry}:${BUILD_NUMBER}
                         docker stop tp2_container || true
                         docker rm tp2_container || true
-                        docker run -d --name tp2_container -p 8080:80 ${registry}:${BUILD_NUMBER}
+                        docker run -d --name tp2_container -p 8087:80 ${registry}:${BUILD_NUMBER}
                     """
                 }
             }
